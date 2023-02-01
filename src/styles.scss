@@ -1,0 +1,138 @@
+// $bgDark : #14213d;
+$bgDark: #090f1d;
+$textColor: #fca311;
+$bg: #e5e5e5;
+
+.App {
+    background-color: $bgDark;
+    width: 100%;
+    min-height: 100vh;
+    color: $textColor;
+    overflow: hidden;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h-screen{
+    height: 100vh;
+}
+.box-shadow{
+    box-shadow: #fca311 1px 3px 2px, #fca311 -1px 0px 20px 5px;
+
+}
+
+.login {
+    height: 100vh;
+    position: relative;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    
+}
+.search{
+    position: absolute;
+    z-index: 20;
+    width: 80%;
+    padding: 10px;
+    height: 65px;
+    background-color: $bgDark;
+    border-radius: 50px;
+    align-items: center;
+    box-shadow: #fca311 1px 3px 2px, #fca311 -1px 0px 20px 5px;
+}
+.search input{
+    width: 80%;
+    height: 20px;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    outline: 0;
+    border: 0;
+}
+.formikRaber   {
+    position: absolute;
+    z-index: 20;
+    width: 300px;
+    padding: 10px;
+    height: 300px;
+    background-color: $bgDark;
+    border-radius: 19%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #fca311 1px 3px 2px, #fca311 -1px 0px 20px 5px;
+
+}
+
+.boxCon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: absolute;
+}
+
+@keyframes ping {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.box1 {
+    width: 250px;
+    height: 250px;
+    border: #e5e5e5 solid 0.8px;
+    animation: ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    border-radius: 19%;
+}
+
+.input {
+    padding: 5px;
+    width: 260px;
+    height: 15px;
+    border-radius: 10px;
+}
+
+.btn {
+    background-color: $bg;
+    cursor: pointer;
+    color: $bgDark;
+    border-radius: 10px;
+    height: 30px;
+    margin-top: 18px;
+    font-weight: bold;
+    border: solid $textColor 1px;
+}
+
+.btn:hover {
+    background-color: $textColor;
+}
+
+.lbl {
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.btn-search {
+    background-color: $bg;
+    cursor: pointer;
+    color: $bgDark;
+    border-radius: 0 20px 20px 0;
+    height: 40px;
+    font-weight: bold;
+    border: solid $textColor 1px;
+}
+
+.btn-search:hover {
+    background-color: $textColor;
+}
