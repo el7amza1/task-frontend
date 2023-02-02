@@ -1,6 +1,7 @@
 import "./styles.scss"
 import Login from './pages/Login';
 import Home from "./pages/Home";
+import History from "./pages/History"
 import {
   Routes,
   Route,
@@ -17,6 +18,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/history' element={<History />} />
+
       </Routes>
 
     </div>
