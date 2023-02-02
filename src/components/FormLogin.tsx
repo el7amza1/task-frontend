@@ -8,8 +8,6 @@ interface Values {
 
 function FormLogin() {
 
-
-
     return (
         <div className='formikRaber'>
             <Formik
@@ -28,12 +26,13 @@ function FormLogin() {
                 }}
             >
                 <Form className='formLogin'>
+                    {/* username  input*/}
                     <label htmlFor="username" className='lbl'>username</label>
-                    <Field className="input" id="username" name="username" placeholder="enter your username" />
-
+                    <Field className="input" id="username" name="username" placeholder="your username" />
+                    {/* password input */}
                     <label htmlFor="password" className='lbl'>password</label>
-                    <Field className="input" id="password" name="password" placeholder="enter your password" />
-
+                    <Field className="input" id="password" name="password" placeholder="your password" />
+                    {/* button */}
                     <button className="btn" type="submit">Submit</button>
                 </Form>
             </Formik>
