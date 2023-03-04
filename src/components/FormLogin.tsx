@@ -1,34 +1,36 @@
 import { Field, Form, Formik, FormikHelpers } from 'formik'
-import React, { useRef, useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { userLogin } from '../utils/API';
 
 interface Values {
-    username: string;
+    userName: string;
     password: string;
 }
 
 function FormLogin() {
-
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     return (
         <div className='formikRaber'>
             <Formik
                 initialValues={{
-                    username: '',
+                    userName: '',
                     password: '',
                 }}
-                onSubmit={(
-                    values: Values,
-                    { setSubmitting }: FormikHelpers<Values>
-                ) => {
-                    setTimeout(() => {
-                        alert(JSON.stringify(values, null, 2));
-                        setSubmitting(false);
-                    }, 500);
-                }}
+                onSubmit={ async (values)=> {await userLogin(navigate, values, dispatch)}}
+                    
+
+                    // setTimeout(async (values: Values) => {
+                        
+                    //     setSubmitting(false);
+                    // }, 500);
+                // }}
             >
                 <Form className='formLogin'>
                     {/* username  input*/}
-                    <label htmlFor="username" className='lbl'>username</label>
-                    <Field className="input" id="username" name="username" placeholder="your username" />
+                    <label htmlFor="userName" className='lbl'>username</label>
+                    <Field className="input" id="userName" name="userName" placeholder="your username" />
                     {/* password input */}
                     <label htmlFor="password" className='lbl'>password</label>
                     <Field className="input" id="password" name="password" placeholder="your password" />
